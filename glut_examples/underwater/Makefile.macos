@@ -1,0 +1,16 @@
+#
+# Copyright (c) Mark J. Kilgard, 1996, 1997.
+#
+# Altered for MacOS 10.14 - davehouse Feb, 2020
+
+
+LDLIBS= -framework GLUT -framework OpenGL -framework Cocoa -Wno-deprecated
+CPPFLAGS = -DGL_SILENCE_DEPRECATION
+
+SRCS = underwater.c texload.c dino.c
+OBJS =	$(SRCS:.c=.o)
+
+underwater: $(OBJS) $(GLUT)
+	$(CC) $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+
+include $(COMMONRULES)
