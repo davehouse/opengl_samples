@@ -1,0 +1,14 @@
+# Object files
+*.o
+
+# Temp files
+.idea
+.vscode
+*.iml
+*~
+
+# vim temporary files
+*.swp
+
+# other ignores
+*.DS_Store
