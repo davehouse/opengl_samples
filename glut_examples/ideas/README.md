@@ -5,7 +5,7 @@ $ make -f Makefile.macos
 [...]
 $ ./ideas
 ```
-![MacOS ideas screenshot](ideas_macos-1.png?raw=true "MacOS ideas screenshot")
+<img src="ideas_macos-1.png?raw=true" width="368" height="330" title="MacOS ideas screenshot">
 
 1. Linking,
 for Macos OpenGL:
@@ -26,4 +26,4 @@ $ otool -L ./ideas
 	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.250.1)
 ```
 
-![MacOS ideas screenshot end frame](ideas_macos-2.png?raw=true "MacOS ideas screenshot")
+<img src="ideas_macos-1.png?raw=true" width="368" height="330" title="MacOS ideas end frame screenshot ">
