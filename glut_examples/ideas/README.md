@@ -1,5 +1,12 @@
 # Build on MacOS 10.14
 
+```
+$ make -f Makefile.macos
+[...]
+$ ./ideas
+```
+![MacOS ideas screenshot](ideas_macos-1.jpg?raw=true "MacOS ideas screenshot")
+
 1. Linking,
 for Macos OpenGL:
  -framework GLUT -framework OpenGL -framework Cocoa
@@ -18,3 +25,5 @@ $ otool -L ./ideas
 	/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa (compatibility version 1.0.0, current version 23.0.0)
 	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.250.1)
 ```
+
+![MacOS ideas screenshot end frame](ideas_macos-2.jpg?raw=true "MacOS ideas screenshot")
