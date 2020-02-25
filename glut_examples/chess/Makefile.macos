@@ -1,0 +1,19 @@
+#
+# Copyright (c) Mark J. Kilgard, 1996, 1997.
+#
+# Altered for MacOS 10.14 - davehouse Feb, 2020
+
+TARGETS = chess
+
+LDLIBS= -framework GLUT -framework OpenGL -framework Cocoa -Wno-deprecated
+CPPFLAGS = -DGL_SILENCE_DEPRECATION
+
+SRCS = chess.c main.c pathplan.c animate.c texture.c
+OBJS =	$(SRCS:.c=.o)
+
+default : $(TARGETS)
+
+chess: $(OBJS) $(GLUT)
+	$(CC) $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+
+include $(COMMONRULES)
