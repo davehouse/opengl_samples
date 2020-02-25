@@ -1,0 +1,19 @@
+#
+# Copyright (c) Mark J. Kilgard, 1996, 1997.
+#
+# Altered for MacOS 10.14 - davehouse Feb, 2020
+
+TARGETS = atlantis
+
+LDLIBS= -framework GLUT -framework OpenGL -framework Cocoa -Wno-deprecated
+CPPFLAGS = -DGL_SILENCE_DEPRECATION
+
+SRCS =	swim.c atlantis.c whale.c dolphin.c shark.c
+OBJS =	$(SRCS:.c=.o)
+
+default : $(TARGETS)
+
+atlantis : $(OBJS) $(GLUT)
+	$(CC) $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+
+include $(COMMONRULES)
