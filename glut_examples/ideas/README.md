@@ -26,4 +26,4 @@ $ otool -L ./ideas
 	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.250.1)
 ```
 
-<img src="ideas_macos-1.png?raw=true" width="368" height="330" title="MacOS ideas end frame screenshot ">
+<img src="ideas_macos-2.png?raw=true" width="368" height="330" title="MacOS ideas end frame screenshot ">
