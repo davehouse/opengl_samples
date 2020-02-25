@@ -1,0 +1,16 @@
+#
+# Copyright (c) Mark J. Kilgard, 1996, 1997.
+#
+# Altered for MacOS 10.14 - davehouse Feb, 2020
+
+
+LDLIBS= -framework GLUT -framework OpenGL -framework Cocoa -Wno-deprecated
+CPPFLAGS = -DGL_SILENCE_DEPRECATION -DYACME_DBG
+
+SRCS = Editor.c invertmat.c
+OBJS =	$(SRCS:.c=.o)
+
+yacme: $(OBJS) $(GLUT)
+	$(CC) $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+
+include $(COMMONRULES)
