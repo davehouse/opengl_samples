@@ -89,9 +89,9 @@ int doublebuffer = 1;		/* Doublebuffer? */
 #define O_8MS		9
 #define O_16MS		10
 
-static int RGBA_SB_attributes = GLUT_SINGLE | GLUT_RGBA | GLUT_DEPTH;
+static int RGBA_SB_attributes = GLUT_SINGLE | GLUT_RGBA | GLUT_DEPTH | GLUT_MULTISAMPLE;
 
-static int RGBA_DB_attributes = GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH;
+static int RGBA_DB_attributes = GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_MULTISAMPLE;
 
 float light1_ambient[] = { 0.0,0.0,0.0,1.0 };
 float light1_lcolor[] = { 1.0,1.0,1.0,1.0 };
