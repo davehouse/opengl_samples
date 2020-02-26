@@ -11,9 +11,9 @@ SRCS =	models.c walker.c walkviewer.c
 OBJS =	$(SRCS:.c=.o)
 
 walker: $(OBJS) $(GLUT)
-	$(CC) -g $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+	$(CC) $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
 
 debug: $(OBJS) $(GLUT)
-	$(CC) -glldb $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+	$(CC) -g $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
 
 include $(COMMONRULES)

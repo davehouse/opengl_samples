@@ -839,7 +839,7 @@ void CurveHandleMenu(int value)
 
 void CurveMenuInit(void)
 {
-  int i;
+  int i = 0;
   char label[3];
 
   if (CurveEditMenu != -1) {
@@ -1068,6 +1068,7 @@ void SetWindowTitles(char *csetname)
 
 int main(int argc, char** argv)
 {
+  int i = 0;
   glutInit(&argc, argv);
 
   glutInitWindowSize(512, 512);
@@ -1101,7 +1102,7 @@ int main(int argc, char** argv)
   if (MakeLoadAndSaveMenus() > 0)  /* read first curve if there was one */
     HandleLoadMenu(0);
 
-  CurveMenuInit();
+  //CurveMenuInit();
 
   glutMainLoop();
   return 0;             /* ANSI C requires main to return int. */
