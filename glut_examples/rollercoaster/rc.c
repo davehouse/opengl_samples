@@ -683,6 +683,7 @@ int main(int argc, char *argv[])
 	sz = atoi(argv[1]);
     else
 	sz = 200;
+    glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH | GLUT_RGBA | GLUT_DOUBLE | GLUT_MULTISAMPLE);
     glutInitWindowPosition(200, 0);
     glutInitWindowSize(sz, sz);
