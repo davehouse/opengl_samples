@@ -1,0 +1,19 @@
+#
+# Copyright (c) Mark J. Kilgard, 1996, 1997.
+#
+# Altered for MacOS 10.14 - davehouse Feb, 2020
+
+
+LDLIBS= -framework GLUT -framework OpenGL -framework Cocoa -Wno-deprecated
+CPPFLAGS = -DGL_SILENCE_DEPRECATION
+
+SRCS =	models.c walker.c walkviewer.c
+OBJS =	$(SRCS:.c=.o)
+
+walker: $(OBJS) $(GLUT)
+	$(CC) -g $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+
+debug: $(OBJS) $(GLUT)
+	$(CC) -glldb $(LDLIBS) -o $@ $(OBJS) $(LDFLAGS)
+
+include $(COMMONRULES)
